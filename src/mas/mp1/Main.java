@@ -1,8 +1,6 @@
 package mas.mp1;
 
 import java.io.*;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class Main {
@@ -10,6 +8,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 	testExtentObjectPlus();
     testSerial();
+    testClass();
     }
 
     private static void testSerial() throws Exception {
@@ -25,8 +24,16 @@ public class Main {
 
     }
 
+    private static void testClass() throws Exception {
 
-    private static void testExtentObjectPlus() throws Exception {
+        var instrument1 = new InstrumentMuzyczny( "Perkusja", "Mapex", "Drewno - Brzoza");
+        instrument1.getCzyWymaganyPrzeglad();
+
+    }
+
+
+
+        private static void testExtentObjectPlus() throws Exception {
         final String extentFilePath = "extent-objectplus.bin";   // TODO update the file name
 
         var instrument1 = new InstrumentMuzyczny( "Perkusja", "Mapex", "Drewno - Brzoza");

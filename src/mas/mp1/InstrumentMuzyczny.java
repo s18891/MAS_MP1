@@ -68,6 +68,13 @@ public class InstrumentMuzyczny extends ObjectPlus implements Serializable {
     public static void showExtent() throws Exception {
         ObjectPlus.showExtent(InstrumentMuzyczny.class);
     }
+
+    public static void oznaczWszystkoDoPrzegladu() throws Exception {
+        ObjectPlus.getExtent(InstrumentMuzyczny.class).forEach(InstrumentMuzyczny::oznaczDoPrzegladu);
+
+
+
+    }
     public String toString(){
         if(dataProdukcji==null)return nazwa+" "+producent+" "+rodzajMaterialu;
         else

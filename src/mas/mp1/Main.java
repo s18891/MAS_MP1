@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 	testExtentObjectPlus();
-    testSerial();
+    //testSerial();
     testClass();
     }
 
@@ -27,7 +27,16 @@ public class Main {
     private static void testClass() throws Exception {
 
         var instrument1 = new InstrumentMuzyczny( "Perkusja", "Mapex", "Drewno - Brzoza");
+        var instrument2 = new InstrumentMuzyczny( "Skrzypce", "Mapex", "Drewno - Brzoza");
+
         instrument1.getCzyWymaganyPrzeglad();
+        instrument2.getCzyWymaganyPrzeglad();
+        InstrumentMuzyczny.oznaczWszystkoDoPrzegladu();
+
+        System.out.println("PO METODZIE KLASOWEJ");
+        instrument1.getCzyWymaganyPrzeglad();
+        instrument2.getCzyWymaganyPrzeglad();
+
 
     }
 
